@@ -1,0 +1,9 @@
+numpy
+scipy
+pandas
+openpyxl
+matplotlib
+PyYAML
+pytest
+torch
+triton

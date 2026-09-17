@@ -1,0 +1,38 @@
+# 全局参数：2025 CUMCM A 烟幕干扰弹投放策略
+physics:
+  g: 9.8
+  missile_speed: 300.0
+  cloud_radius: 10.0
+  sink_speed: 3.0
+  cloud_lifetime: 20.0
+  min_burst_height: 60.0
+
+target:
+  center: [0.0, 200.0, 0.0]
+  cylinder_radius: 7.0
+  cylinder_height: 10.0
+
+missiles:
+  M1: [20000.0, 0.0, 2000.0]
+  M2: [19000.0, 600.0, 2100.0]
+  M3: [18000.0, -600.0, 1900.0]
+
+uavs:
+  FY1: [17800.0, 0.0, 1800.0]
+  FY2: [12000.0, 1400.0, 1400.0]
+  FY3: [6000.0, -3000.0, 700.0]
+  FY4: [11000.0, 2000.0, 1800.0]
+  FY5: [13000.0, -2000.0, 1300.0]
+
+optimization:
+  seed: 2025
+  sample_dt: 0.1
+  uav_speed_range: [70.0, 140.0]
+  drop_time_range: [0.0, 55.0]
+  tau_min: 0.5
+
+budgets:
+  q2: {popsize: 20, maxiter: 800}
+  q3: {popsize: 16, maxiter: 500}
+  q4: {popsize: 14, maxiter: 500}
+  q5: {popsize: 16, maxiter: 600, gpu: true}
